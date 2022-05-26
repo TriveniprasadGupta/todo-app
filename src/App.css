@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+.todo{
+  border: 1px solid black;
+  width: 60%;
+  min-width: 400px;
+  margin: 20px auto;
+}
+
+.todo__item{
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.267);
+
+}
