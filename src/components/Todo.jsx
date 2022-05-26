@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { nanoid } from 'nanoid'
 import axios from 'axios';
 import { TodoItem } from './TodoItem';
+import { Button } from './Button';
 
 const Todo = () => {
 
@@ -27,6 +28,7 @@ const Todo = () => {
 
         axios.post('http://localhost:4101/todos', data)
             .then(({ data }) => {
+                setData({ task: '', complete: false });
                 getTodos();
             }).catch((err) => {
                 console.log(err);
@@ -37,9 +39,9 @@ const Todo = () => {
         <div>
             <h2>Todo App</h2>
 
-            <div>
-                <input type="text" onChange={(e) => setData({ ...data, task: e.target.value })} />
-                <button onClick={handleSubmit}>Save</button>
+            <div className='input'>
+                <input type="text" value={data.task} onChange={(e) => setData({ ...data, task: e.target.value })} />
+                <Button onClick={handleSubmit}>Save</Button>
             </div>
 
             <div className='todo'>
