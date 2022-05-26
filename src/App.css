@@ -10,10 +10,8 @@
 }
 
 .todo__item{
-  padding: 0 5%;
+  padding: 0 4%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   border: 1px solid rgba(0, 0, 0, 0.267);
-
 }

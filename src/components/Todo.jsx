@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { nanoid } from 'nanoid'
 import axios from 'axios';
+import { TodoItem } from './TodoItem';
 
 const Todo = () => {
 
@@ -42,11 +43,8 @@ const Todo = () => {
             </div>
 
             <div className='todo'>
-                {list.map(({id, task, complete})=>{
-                    return <div key={id} className='todo__item'>
-                        <h4>{task}</h4>
-                        <input type="checkbox" name="" id="" />
-                    </div>
+                {list.map((item)=>{
+                    return <TodoItem key={item.id} item={item} getTodos={getTodos}/>
                 })}
             </div>
         </div>

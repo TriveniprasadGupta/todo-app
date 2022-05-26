@@ -1,14 +1,14 @@
 {
   "todos": [
     {
-      "task": "Learn React",
-      "complete": false,
-      "id": 1
-    },
-    {
       "task": "Learn Redux",
       "complete": false,
       "id": 2
+    },
+    {
+      "task": "Learn JS",
+      "complete": false,
+      "id": 3
     }
   ]
 }
